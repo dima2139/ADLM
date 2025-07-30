@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=test
-#SBATCH --output=logs/test_9.out
-#SBATCH --error=logs/test_9.err
+#SBATCH --output=logs/test_5.out
+#SBATCH --error=logs/test_5.err
 #SBATCH --time=3-24:00:00
 #SBATCH --partition=asteroids
 #SBATCH --qos=master
 #SBATCH --gres=gpu:1
-#SBATCH --mem=96G
+#SBATCH --mem=72G
 #SBATCH --cpus-per-task=10
 #SBATCH --mail-user=go73hay@mytum.de
 #SBATCH --mail-type=ALL
@@ -20,7 +20,7 @@ conda activate ADML
 export PYTHONPATH="/vol/miltank/users/wyou/Documents/nnUNet:$PYTHONPATH"
 export nnUNet_raw="/u/home/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/nnUNet_raw"
 export nnUNet_preprocessed="/u/home/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/nnUNet_preprocessed"
-export nnUNet_results="/u/home/wyou/Documents/results/Kits2023/all_OG_lowres2_model/nnUNet_results"
+export nnUNet_results="/u/home/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/nnUNet_trained_models"
 
 # 解决多进程问题的关键设置
 export CUDA_VISIBLE_DEVICES=0
@@ -50,7 +50,6 @@ export PYTHONUNBUFFERED=1
 #nnUNetv2_predict -d 221 -i /u/home/wyou/Documents/target_images_model_8 -o /u/home/wyou/Documents/predictions_target_model_8 -f all -c 3d_fullres --save_probabilities
 #nnUNetv2_predict -d 221 -i /u/home/wyou/Documents/target_images_model_9 -o /u/home/wyou/Documents/predictions_target_model_9 -f all -c 3d_fullres --save_probabilities
 nnUNetv2_predict -d 221 -i /u/home/wyou/Documents/target_images_model_10 -o /u/home/wyou/Documents/predictions_target_model_10 -f all -c 3d_fullres --save_probabilities
-
 
 # nnUNetv2_evaluate_folder -d 221 -ref /u/home/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/nnUNet_raw/Dataset221_KiTS2023/labelsTs/ -pred /u/home/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/predictions_fold2/ -c 3d_fullres
 
