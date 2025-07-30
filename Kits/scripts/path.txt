@@ -1,3 +1,0 @@
-img_path = "/vol/miltank/users/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/nnUNet_raw/Dataset221_KiTS2023/imagesTs/case_00501_0000.nii.gz"   # 如果你有原始图像
-label_path = "/vol/miltank/users/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/nnUNet_raw/Dataset221_KiTS2023/labelsTs/case_00501.nii.gz"
-pred_path = "/vol/miltank/users/wyou/Documents/nnUNet/nnUNetFrame/dataset_221/predictions_baseline/case_00501.nii.gz"
