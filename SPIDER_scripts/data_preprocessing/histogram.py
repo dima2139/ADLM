@@ -3,6 +3,17 @@ import nibabel as nib
 import numpy as np
 import matplotlib.pyplot as plt
 
+# ============================
+# ===== USER CONFIGURATION ===
+# ============================
+
+# Path to the folder containing the cleaned/reoriented images
+cleaned_folder = 'C:/ADLM/Datasets/SPIDER_FULL_FINAL/10159290/ALL_modified_renamed_images'
+
+# ============================
+# ===== SCRIPT BEGINS HERE ===
+# ============================
+
 def plot_voxel_spacing(data_folder):
     spacings_x = []
     spacings_y = []
@@ -41,7 +52,7 @@ def plot_voxel_spacing(data_folder):
     
     # Plot figure with 3 subplots
     fig, axs = plt.subplots(1, 3, figsize=(18, 5))
-    fig.suptitle('Distribution of Voxel Spacings Across the entire SPIDER Dataset', fontsize=16)
+    fig.suptitle('Distribution of Voxel Spacings Across the Dataset', fontsize=16)
 
     # Histogram for X-axis spacing
     axs[0].hist(spacings_x, bins=20, color='skyblue', edgecolor='black')
@@ -60,11 +71,10 @@ def plot_voxel_spacing(data_folder):
     axs[2].set_title('Spacing Distribution (Z-axis)')
     axs[2].set_xlabel('Voxel Spacing (mm)')
 
-
     # Improve layout
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.show()
 
 
-cleaned_folder = 'C:/ADLM/Datasets/SPIDER_FULL_FINAL/10159290/ALL_modified_renamed_images'
+# --- Run the analysis ---
 plot_voxel_spacing(cleaned_folder)

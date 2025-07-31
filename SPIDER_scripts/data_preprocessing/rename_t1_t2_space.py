@@ -2,8 +2,8 @@ import os
 import shutil
 
 # --- Configuration ---
-images_folder = 'C:/ADLM/Datasets/SPIDER_FULL_FINAL/10159290/renaming/T1_images_reoriented'  # <--- IMPORTANT: Change this to your actual image folder path
-masks_folder = 'C:/ADLM/Datasets/SPIDER_FULL_FINAL/10159290/renaming/T1_masks_reoriented_relabeled'    # <--- IMPORTANT: Change this to your actual mask folder path
+images_folder = ''  # <--- IMPORTANT: Change this to your actual image folder path
+masks_folder = ''    # <--- IMPORTANT: Change this to your actual mask folder path
 start_new_prefix = 501 # This will be the starting number for the '901', '902', etc. sequence
 
 # --- Function to extract base name and extension ---

@@ -2,8 +2,9 @@ import os
 import SimpleITK as sitk
 import shutil
 
-input_dir = "C:/ADLM/Datasets/SPIDER_FULL_FINAL/10159290/T2_masks"
-output_labelsTr = "C:/ADLM/Datasets/SPIDER_FULL_FINAL/10159290/T2_masks_nii.gz" # Optional
+#WRITE PATH TO YOUR DATASET BELOW:
+input_dir = ""
+output_labelsTr = "" # Optional
 
 # Map modality name to nnUNet index
 modality_map = {
