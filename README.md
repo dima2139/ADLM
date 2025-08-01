@@ -10,3 +10,4 @@ For the KiTS2023 dataset go though the notebooks in this order:<br>
 3. kits_inference.ipynb
 4. kits_evaluation.ipynb
 
+For the SPIDER dataset go though the notebooks in SPIDER_scripts
