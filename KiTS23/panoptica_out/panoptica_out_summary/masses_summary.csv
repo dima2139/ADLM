@@ -1,0 +1,22 @@
+Model,InputType,Dice,ASSD,HD95,ModelLabel
+OG_baseline,native,0.7443648902384159,inf,inf,0.8x0.8x0.8
+OG_baseline,resampled,0.7235838083149615,inf,inf,0.8x0.8x0.8
+OG_highres1,native,0.6466154293176986,inf,inf,0.64x0.64x0.64
+OG_highres1,resampled,0.6292616633948127,inf,inf,0.64x0.64x0.64
+OG_highres2,native,0.573964570343874,inf,inf,0.53x0.53x0.53
+OG_highres2,resampled,0.5498361971725805,inf,inf,0.53x0.53x0.53
+OG_lowres1,native,0.6970184761571945,inf,inf,1.06x1.06x1.06
+OG_lowres1,resampled,0.6883099260104671,inf,inf,1.06x1.06x1.06
+OG_lowres2,native,0.4612534983609798,inf,inf,1.6x1.6x1.6
+OG_lowres2,resampled,0.4303040102248184,inf,inf,1.6x1.6x1.6
+baseline,native,0.31945748836108695,inf,inf,3.0x0.8x0.8
+baseline,resampled,0.32040560744230717,inf,inf,3.0x0.8x0.8
+highres0_5,native,0.5076960741632061,inf,inf,2.25x0.7x0.7
+highres0_5,resampled,0.5060100576719103,inf,inf,2.25x0.7x0.7
+highres1,native,0.5915002526192111,inf,inf,1.5x0.6x0.6
+highres1,resampled,0.5763033571901933,inf,inf,1.5x0.6x0.6
+highres1_5,native,0.41718414650069374,inf,inf,1.25x0.5x0.5
+highres1_5,resampled,0.40986941233880314,inf,inf,1.25x0.5x0.5
+highres1_5_model_2000_vox,native,0.5593682809030811,inf,inf,1.5x0.6x0.6 (2000 epochs)
+highres2,native,0.21654858068093205,inf,inf,1.0x0.4x0.4
+highres2,resampled,0.21260130302075556,inf,inf,1.0x0.4x0.4
