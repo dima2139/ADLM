@@ -15,7 +15,7 @@ all_data = []
 
 for file_path in tsv_files:
     filename = os.path.basename(file_path).replace(".tsv", "")
-    input_type = "resampled" if "_target" in filename else "native"
+    input_type = "target" if "_target" in filename else "native"
     clean_name = filename.replace("all_", "").replace("_model_vox_target", "").replace("_model_vox", "")
     model_name = clean_name.strip()
     df = pd.read_csv(file_path, sep="\t")
@@ -37,7 +37,7 @@ model_name_map = {
     "highres1": "1.5x0.6x0.6",
     "highres1_5": "1.25x0.5x0.5",
     "highres2": "1.0x0.4x0.4",
-    "highres1_5_model_2000_vox": "1.5x0.6x0.6 (2000 epochs)",
+    "highres1_5_model_2000_vox": "1.25x0.5x0.5 (2000 epochs)",
 }
 
 # === Output per-organ comparison summary table ===
@@ -77,7 +77,7 @@ df_all_summary_no_2000 = df_all_summary[~df_all_summary["Model"].str.contains("2
 df_all_summary_no_2000["ModelLabel"] = df_all_summary_no_2000["Model"].map(model_name_map).fillna(df_all_summary_no_2000["Model"])
 
 # 1. Plot Dice per model (native / resampled separately, all organs)
-for input_type in ["native", "resampled"]:
+for input_type in ["native", "target"]:
     df_plot = df_all_summary_no_2000[df_all_summary_no_2000["InputType"] == input_type]
     plt.figure(figsize=(12, 6))
     sns.barplot(
@@ -139,13 +139,13 @@ sns.barplot(
     palette="Set1",
     edgecolor="black"
 )
-plt.title("Dice: Native vs Resampled (All Organs)")
+plt.title("Dice: Native vs Target (All Organs)")
 plt.ylabel("Dice")
 plt.xlabel("Model")
 plt.ylim(0, 1.0)
 plt.legend(title="Input Type")
 plt.tight_layout()
-plt.savefig(os.path.join(plot_dir, "allorgans_native_vs_resampled.png"))
+plt.savefig(os.path.join(plot_dir, "allorgans_native_vs_target.png"))
 plt.close()
 
 # 4. Epoch comparison with two specific models (all organs)
